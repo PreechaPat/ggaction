@@ -1,0 +1,16 @@
+name: The demo
+run-name: ${{ github.actor }} is testing
+on: [push]
+jobs:
+  Explore-actions:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "${{ github.event_name }} event"
+      - run: echo "${{ runner.os }}"
+      - name: Check out repository code
+        uses: actions/checkout@v4
+      - run: echo "💡 The ${{ github.repository }} repository has been cloned to the runner."
+      - name: List files
+        run: |
+          ls ${{ github.workspace }}
+      - run: echo "🍏 This job's status is ${{ job.status }}."
