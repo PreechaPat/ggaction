@@ -14,3 +14,8 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
+  Ping-something:
+    runs-on: ubuntu-latest
+    steps:
+      - name: ping to webhook I guess
+        run: echo "Yes"
